@@ -1,0 +1,314 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Transparent Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0) !important;
+    height: 80px; /* Increase height to accommodate the content better */
+}
+
+/* Logo styling */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 100px; /* Set a fixed height for the logo */
+    width: auto; /* Maintain the aspect ratio of the logo */
+}
+
+/* Navbar links styling */
+.navbar .nav-link {
+    color: rgb(255, 255, 255) !important;
+    transition: color 0.3s ease;
+    margin: 15px;
+    font-weight: 300;
+}
+
+.navbar .nav-link:hover {
+    color: #0044ff !important;
+}
+
+
+/* Ensure images in the carousel fit well */
+.carousel-item img {
+    background-size: contain; /* Makes sure images cover the full width and height without distorting */
+    height: 600px; /* Adjust the height as necessary */
+}
+
+/* Carousel Caption Styles */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Adds shadow for better readability */
+    font-size: 44px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+/* Optional: Add a gradient overlay to images for better text visibility */
+.carousel-item img {
+    filter: brightness(80%); /* Dim images slightly */
+}
+
+/* Responsive adjustments: Lower image height on small screens */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px; /* Reduce the height of the images on smaller screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem; /* Make the heading slightly smaller on smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+}
+
+/* Add some space above the content */
+.content-container {
+    padding-top: 60px; /* Adjust content spacing to not overlap the navbar */
+    text-align: center;
+}
+
+/* WHATSAPP, CALL BUTTONS */
+
+.fixed-buttons {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-whatsapp-pulse {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s ease-out infinite;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp-pulse:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp-pulse i {
+    font-size: 22px;
+}
+
+.whatsapp-button {
+    background: #25d366;
+    border: 1px solid white;
+}
+
+.call-button {
+    background: #0f3f64;
+    border: 1px solid white;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+}
+
+.experience-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experience-title {
+    font-size: 32px;
+    color: #0044ff !important;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    font-size: 16px;
+    color: #000000;
+    line-height: 0.8;
+    margin-top: 0;
+}
+
+/* Ensure cards have equal height */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Set the image size to be equal and responsive */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Makes sure the image fills the space */
+}
+
+/* Card body */
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Hover effect for cursor */
+.hover-effect {
+    cursor: pointer;
+}
+
+/* Optional: Add padding to the container to make it look more balanced */
+.exclusive_deal.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Make sure cards have equal heights for alignment */
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Custom Styles for About Us Section */
+.about-us-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 300;
+    color: #0044ff !important;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000000;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.about-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+/* Ensure images have equal height */
+.about-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .about-image-container {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Basic Styles */
+.footer {
+    background-color: #0044ffc5;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 5px 0;
+    }
+}
