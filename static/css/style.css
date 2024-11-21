@@ -1,0 +1,565 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Transparent Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0) !important;
+    height: 80px;
+    /* Increase height to accommodate the content better */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Logo styling */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 100px;
+    /* Set a fixed height for the logo */
+    width: auto;
+    /* Maintain the aspect ratio of the logo */
+}
+
+/* Navbar links styling */
+.navbar .nav-link {
+    color: rgb(255, 255, 255) !important;
+    transition: color 0.3s ease;
+    margin: 15px;
+    font-weight: 300;
+}
+
+/* Navbar links hover effect */
+.navbar .nav-link:hover {
+    color: black !important;
+}
+
+/* Navbar change when scrolled */
+.navbar.scrolled {
+    background-color: rgb(108, 98, 255) !important;
+    /* Blue background when scrolled */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow to the navbar */
+}
+
+.navbar.scrolled .nav-link {
+    color: white !important;
+    /* Change nav items to white when scrolled */
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: black !important;
+    /* Change hover color to black */
+}
+
+/* Ensure images in the carousel fit well */
+.carousel-item img {
+    background-size: contain;
+    /* Makes sure images cover the full width and height without distorting */
+    height: 600px;
+    /* Adjust the height as necessary */
+}
+
+/* Carousel Caption Styles */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    /* Adds shadow for better readability */
+    font-size: 44px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+/* Optional: Add a gradient overlay to images for better text visibility */
+.carousel-item img {
+    filter: brightness(80%);
+    /* Dim images slightly */
+}
+
+/* Responsive adjustments: Lower image height on small screens */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+        /* Reduce the height of the images on smaller screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+        /* Make the heading slightly smaller on smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        /* Adjust paragraph font size */
+    }
+}
+
+/* Add some space above the content */
+.content-container {
+    padding-top: 60px;
+    /* Adjust content spacing to not overlap the navbar */
+    text-align: center;
+}
+
+/* WHATSAPP, CALL BUTTONS */
+
+.fixed-buttons {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-whatsapp-pulse {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s ease-out infinite;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp-pulse:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp-pulse i {
+    font-size: 22px;
+}
+
+.whatsapp-button {
+    background: #25d366;
+    border: 1px solid white;
+}
+
+.call-button {
+    background: #0f3f64;
+    border: 1px solid white;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+}
+
+.experience-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experience-title {
+    font-size: 32px;
+    color: #0044ff !important;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    font-size: 16px;
+    color: #000000;
+    line-height: 0.8;
+    margin-top: 0;
+}
+
+/* Ensure cards have equal height */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Set the image size to be equal and responsive */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Makes sure the image fills the space */
+}
+
+/* Card body */
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Hover effect for cursor */
+.hover-effect {
+    cursor: pointer;
+}
+
+/* Optional: Add padding to the container to make it look more balanced */
+.exclusive_deal.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Make sure cards have equal heights for alignment */
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Custom Styles for About Us Section */
+.about-us-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 300;
+    color: #0044ff !important;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000000;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.about-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+/* Ensure images have equal height */
+.about-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .about-image-container {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* FOOTER */
+footer h5 {
+    color: rgb(255, 255, 255);
+}
+
+footer p {
+    color: rgb(255, 255, 255);
+}
+
+footer .fab {
+    font-size: 1.8rem;
+    transition: color 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+footer .fab:hover {
+    color: rgb(141, 133, 255);
+}
+
+footer {
+    border: 1px solid rgba(0, 0, 0, 0.079);
+    background-color: rgb(108, 98, 255);
+}
+
+/* Centering footer columns in a row */
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+/* Responsive Styles for smaller devices */
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .col-md-3 {
+        margin-bottom: 15px;
+    }
+
+    /* Make the columns stack vertically in small screens */
+    footer .col-md-3 {
+        flex: 1 1 100%;
+    }
+}
+
+/* General styling for the cards */
+.experience-cards .card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 150px;
+    /* Ensure a fixed height for each card */
+}
+
+.experience-cards .card-body {
+    padding: 20px;
+}
+
+.experience-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.experience-cards .card-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.experience-cards .card-number {
+    font-size: 22px;
+    color: #007bff;
+    /* Blue color */
+    font-weight: bold;
+}
+
+/* Icon styling inside the card */
+.experience-cards .icon {
+    font-size: 30px;
+    color: #007bff;
+    /* Blue color */
+}
+
+/* Hover effect for the icon and text */
+.experience-cards .card:hover .icon {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+.experience-cards .card-body .card-title,
+.experience-cards .card-body .card-number {
+    transition: transform 0.3s ease;
+}
+
+.experience-cards .card:hover .card-title,
+.experience-cards .card:hover .card-number {
+    transform: translateY(-5px);
+}
+
+/* Ensure cards are in a single row */
+.experience-cards {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .experience-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.whatwedocards {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.whatwedocards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+
+/* Overlay Style */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatwedocards:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.team-container {
+    margin-top: 20px;
+}
+
+/* General slider styling */
+.weprovide-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+}
+
+.weprovide-cards-wrapper {
+    display: flex;
+    animation: slide-left 50s linear infinite;
+    width: calc(300px * 15); /* Adjust based on the number of cards */
+}
+
+/* Individual card styling */
+.weprovide-cards {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.weprovide-cards img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    height: 150px;
+}
+
+.weprovide-cards:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Smooth sliding animation */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust as per the card count */
+    }
+}
+
+.card {
+    position: relative;
+    min-width: 300px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Hover Effect */
+.card:hover .card-overlay {
+    background: rgba(0, 0, 255, 0.8);
+    transition: background 0.5s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* For seamless loop, duplicate cards */
+.weprovide-cards::after {
+    content: "";
+    display: inline-flex;
+}
