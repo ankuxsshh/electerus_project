@@ -1,10 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+{% extends 'base.html' %}
+About Us | Electreus</title>
+{% block content %}
 
-  <body></body>
-</html>
+<section>
+  <div class="about-section text-white d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+        <h1 class="display-4" style="font-size: 42px; font-weight: 500;">ABOUT US</h1>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+
+<section>
+  <div class="container welcome-container">
+      <h1>WELCOME TO <b>ELECTREUS ENGINEERS AND CONTRACTORS</b></h1>
+      <p>
+        Electreus Engineers and Contractors is a premier engineering and construction firm dedicated to delivering top-tier projects that meet both quality and budgetary requirements. With a team of skilled professionals, we specialize in offering innovative solutions for residential and commercial developments. Our commitment to excellence is demonstrated through our meticulous attention to detail, timely project delivery, and strict adherence to safety standards. At Electreus, we focus on building lasting relationships with clients, grounded in trust, integrity, and exceptional service. Whether it's design, engineering, or construction, we take pride in transforming ideas into reality, ensuring each project is completed with precision and care. Our mission is to be a reliable partner for all your construction needs, delivering results that exceed expectations.
+      </p>
+  </div>
+</section>
+
+<br>
+<br>
+
+<section>
+  <div class="container">
+    <div class="position-relative">
+      <!-- Image -->
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/098/171/small_2x/ai-generated-close-up-detail-of-an-electrician-hands-working-with-wires-and-fuse-switch-box-photo.jpg" class="img-fluid" alt="Electrician working with wires">
+      
+      <!-- Overlay Text -->
+      <div class="position-absolute top-50 start-50 translate-middle justify-content-center">
+        <h2 style="font-size: 40px;">We Help Households and companies with their electric needs.</h2>
+        <p  style="font-size: 20px;">We assist in the maintenance of your electric foundation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+
+<section>
+  <h6 class="text-center mb-4" style="font-size: 36px; font-weight: 500; color: #0044ff;"><b>EXPERIENCE</b> COUNTS, OUR <b>VISION</b>, OUR <b>MISSION</b></h2>
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card dream-cards">
+          <img src="https://media.istockphoto.com/id/1095603308/photo/finances-saving-economy-concept.jpg?s=612x612&w=0&k=20&c=mfOMXz6KNSQDpOt_gkZ2aR51zAjtC-mE6ZUdY89d_To=" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">EXPERIENCE COUNTS</h5>
+            <p class="card-text">Our team of estimators and project manager has worked together for more years than we can count. We know the territory. More importantly, our clients trust us and the integrity we bring to every project. Our field crews are licensed & certified in the Electrical Industry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card dream-cards">
+          <img src="https://img.freepik.com/free-photo/man-s-hand-holding-professional-digital-camera-lens_23-2148038875.jpg?semt=ais_hybrid" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">OUR VISION</h5>
+            <p class="card-text">To be the leader in providing comprehensive solutions to help our customers take advantage of their opportunities. We strive to offer the best standards of workmanship, knowledge, safe working procedures, and policies while installing quality apparatus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card dream-cards">
+          <img src="https://www.indushospital.in/images/Mission.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">OUR MISSION</h5>
+            <p class="card-text">Our never-ending goal is to create outstanding solutions for our clients and build long-lasting relationships by taking on a partnership role and providing quality work, industry knowledge, and the best customer service on an ongoing basis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+
+<section>
+  <h6 class="text-center mb-4" style="font-size: 36px; font-weight: 500; color: #0044ff;"><b>EXPERT ELECTRICIANS</b> IN SOUTH KERALA</h6>
+  <div class="container my-5">
+    <div class="expert-container row align-items-center">
+      <!-- Left Container (Text) -->
+      <div class="col-md-6">
+        <p class="expert-container-text">
+          Electreus is an experienced electrical company providing unmatched electrical services to properties throughout
+South Kerala and the surrounding areas. We understand that electrical issues can be nerve wracking and also
+affect your safety and comfort indoors, which is why our electricians are available 24 hours a day, 365 days a year.
+We aren’t interested in Band-Aid fixes either, and instead, work tirelessly to ensure long-lasting, effective, and
+energy-efficient solutions—for the ultimate peace of mind. Our electricians are so confident in our services that
+we offer a 3-year guarantee on all of our electrical work.
+At Electreus, we prioritize your safety at every turn, and pair time-tested methods with industry-leading products
+to deliver results that exceed your expectations. From rewiring and lighting installation to panel upgrades and
+electrical repairs, our electricians can do it all.
+To learn more about our services, or to schedule an appointment, call our team today at <b class="" style="color: #0044ff;">989-55-33-88-4</b>.
+        </p>
+      </div>
+
+      <!-- Right Container (Image) -->
+      <div class="col-md-6">
+        <img src="https://img.freepik.com/premium-photo/electricians-safety-gear-working-wiring-electrical-panels_1269581-2689.jpg" alt="Electricians in South Kerala" class="img-fluid expert-container-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
