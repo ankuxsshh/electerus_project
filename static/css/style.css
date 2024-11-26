@@ -1,7 +1,6 @@
 /* General body styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
 }
 
 /* Transparent Navbar */
@@ -61,8 +60,8 @@ body {
 .carousel-item img {
     background-size: contain;
     /* Makes sure images cover the full width and height without distorting */
-    height: 570px;
-    filter: brightness(0.3);
+    height: 620px;
+    filter: brightness(0.6);
     /* Adjust the height as necessary */
 }
 
@@ -83,7 +82,7 @@ body {
 
 /* Optional: Add a gradient overlay to images for better text visibility */
 .carousel-item img {
-    filter: brightness(0.5);
+    filter: brightness(0.6);
     /* Dim images slightly */
 }
 
@@ -151,12 +150,12 @@ body {
 
 .whatsapp-button {
     background: #25d366;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 .call-button {
     background: #0f3f64;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 @keyframes pulse {
@@ -226,15 +225,8 @@ body {
     align-items: center;
 }
 
-/* Icon styling */
-.icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
 /* Count animation styling */
 .card-number {
-    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -258,7 +250,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.144);
     border-radius: 0 !important;
 }
 
@@ -500,7 +492,7 @@ footer .row {
 
 .weprovide-cards-wrapper {
     display: flex;
-    animation: slide-left 50s linear infinite;
+    animation: slide-left 400s linear infinite;
     width: calc(300px * 15);
     /* Adjust based on the number of cards */
 }
@@ -732,7 +724,6 @@ footer .row {
 .img-fluid {
     width: 100%;
     height: 60vh;
-    filter: brightness(0.3);
 }
 
 .about-section {
@@ -838,4 +829,95 @@ footer .row {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   filter: brightness(0.9);
+}
+
+/* Styles for the install-container */
+.install-container .text-container {
+  text-align: left;
+  padding: 20px;
+}
+
+.install-container .text-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.install-container .image-container img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.point-slider-container {
+  margin-top: 2rem;
+}
+
+.point-slider-container .carousel-item img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: brightness(0.2);
+}
+
+.point-slider-container .overlay-text {
+  border-radius: 6px;
+  color: white;
+}
+
+.point-slider-container .overlay-text ul {
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  line-height: 2.2;
+}
+
+/* Styling for the brand-cards container */
+.brand-cards-wrapper {
+  position: relative;
+  overflow: hidden; /* Hide cards that overflow */
+  width: 100%;
+}
+
+.brand-cards-container {
+  display: flex;
+  gap: 20px; /* Space between brand cards */
+  animation: slide-left 70s linear infinite; /* Smooth infinite animation, adjusted duration */
+}
+
+.brand-card {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 200px; /* Fixed width for consistent layout */
+  margin: 0px 50px;
+}
+
+.brand-card .card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bootstrap-like shadow */
+}
+
+.brand-card .card:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.brand-card .card-img-top {
+  height: 180px; /* Adjust image height */
+  object-fit: auto; /* Ensure the image is fully visible */
+  width: 100%;
+}
+
+/* Animation for sliding the brand cards */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-800%); /* Move fully to the left */
+  }
 }

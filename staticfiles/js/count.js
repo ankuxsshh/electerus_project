@@ -1,7 +1,7 @@
 // Function to animate number counting
 function countToNumber(elementId, endValue) {
     let startValue = 0;
-    let duration = 2000; // Duration in milliseconds
+    let duration = 8000; // Duration in milliseconds
     let stepTime = Math.abs(Math.floor(duration / endValue));
     let element = document.getElementById(elementId);
   
