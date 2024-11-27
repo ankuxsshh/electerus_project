@@ -40,9 +40,9 @@ body {
 
 /* Navbar change when scrolled */
 .navbar.scrolled {
-    background-color: rgb(108, 98, 255) !important;
+    background-color: rgb(152, 145, 248) !important;
     /* Blue background when scrolled */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     /* Add shadow to the navbar */
 }
 
@@ -280,9 +280,9 @@ body {
 }
 
 .about-text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
-    color: #000000;
+    color: #262626;
     margin-top: 20px;
 }
 
@@ -323,8 +323,16 @@ footer h5 {
     color: rgb(255, 255, 255);
 }
 
+footer h5:hover {
+    color: rgb(39, 31, 156);
+}
+
 footer p {
     color: rgb(255, 255, 255);
+}
+
+footer p:hover {
+    color: rgb(39, 31, 156);
 }
 
 footer .fab {
@@ -334,12 +342,12 @@ footer .fab {
 }
 
 footer .fab:hover {
-    color: rgb(22, 20, 53);
+    color: rgb(39, 31, 156);
 }
 
 footer {
-    border: 1px solid rgba(0, 0, 0, 0.079);
-    background-color: rgb(108, 98, 255);
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(152, 145, 248) !important;
 }
 
 /* Centering footer columns in a row */
@@ -469,7 +477,7 @@ footer .row {
 .text {
     color: white;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -525,7 +533,7 @@ footer .row {
     padding: 10px;
     font-size: 13px;
     font-weight: bold;
-    color: #333;
+    color: #232323;
 }
 
 /* Smooth sliding animation */
@@ -682,7 +690,7 @@ footer .row {
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.4);
+    filter: brightness(0.2);
 }
 
 .overlay-content .overlay-text {
@@ -764,160 +772,375 @@ footer .row {
 
 /* Custom CSS for dream card overlay effect */
 .dream-cards {
-  position: relative;
-  overflow: hidden;
-  height: 350px; /* Fixed height for uniformity */
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    /* Fixed height for uniformity */
 }
 
 .dream-cards img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 .dream-cards:hover img {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
 }
 
 .dream-cards .card-body {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .dream-cards:hover .card-body {
-  opacity: 1;
+    opacity: 1;
 }
 
 .dream-cards .card-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .dream-cards .card-text {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* Expert Container styles */
 .expert-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 .expert-container-text {
-  font-size: 16px;
-  color: #555;
+    font-size: 16px;
+    color: #232323;
 }
 
 .expert-container-img {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  filter: brightness(0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    filter: brightness(0.9);
 }
 
 /* Styles for the install-container */
 .install-container .text-container {
-  text-align: left;
-  padding: 20px;
+    text-align: left;
+    padding: 20px;
 }
 
 .install-container .text-container p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .install-container .image-container img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border: 2px solid #ddd;
-  border-radius: 10px;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 10px;
 }
 
 .point-slider-container {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .point-slider-container .carousel-item img {
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  filter: brightness(0.2);
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.4);
 }
 
 .point-slider-container .overlay-text {
-  border-radius: 6px;
-  color: white;
+    border-radius: 6px;
+    color: white;
 }
 
 .point-slider-container .overlay-text ul {
-  padding: 0;
-  margin: 0;
-  font-size: 17px;
-  line-height: 2.2;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 2.2;
 }
 
 /* Styling for the brand-cards container */
 .brand-cards-wrapper {
-  position: relative;
-  overflow: hidden; /* Hide cards that overflow */
-  width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Hide cards that overflow */
+    width: 100%;
 }
 
 .brand-cards-container {
-  display: flex;
-  gap: 20px; /* Space between brand cards */
-  animation: slide-left 70s linear infinite; /* Smooth infinite animation, adjusted duration */
+    display: flex;
+    gap: 20px;
+    /* Space between brand cards */
+    animation: slide-left 70s linear infinite;
+    /* Smooth infinite animation, adjusted duration */
 }
 
 .brand-card {
-  flex: 0 0 auto; /* Prevent cards from shrinking */
-  width: 200px; /* Fixed width for consistent layout */
-  margin: 0px 50px;
+    flex: 0 0 auto;
+    /* Prevent cards from shrinking */
+    width: 200px;
+    /* Fixed width for consistent layout */
+    margin: 0px 50px;
 }
 
 .brand-card .card {
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.5s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bootstrap-like shadow */
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Bootstrap-like shadow */
 }
 
 .brand-card .card:hover {
-  transform: scale(1.05); /* Subtle hover effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    /* Subtle hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .brand-card .card-img-top {
-  height: 180px; /* Adjust image height */
-  object-fit: auto; /* Ensure the image is fully visible */
-  width: 100%;
+    height: 180px;
+    /* Adjust image height */
+    object-fit: auto;
+    /* Ensure the image is fully visible */
+    width: 100%;
 }
 
 /* Animation for sliding the brand cards */
 @keyframes slide-left {
-  0% {
-    transform: translateX(0); /* Start position */
-  }
-  100% {
-    transform: translateX(-800%); /* Move fully to the left */
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateX(-800%);
+        /* Move fully to the left */
+    }
+}
+
+.project-section {
+    background: url('https://wallpapercrafter.com/th8001/596265-the-city-table-room-sofa-books-Windows-chairs.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-section .container {
+    padding: 4rem;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(176, 176, 176));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    width: 260px;
+    height: 220px;
+}
+
+.project-image {
+    position: relative;
+    width: 260px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card img {
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+    width: 260px;
+    height: 250px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-title {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(202, 205, 244, 0.68));
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.service-section {
+    background: url('https://www.modern.place/wp-content/uploads/2023/05/lighting-standards-for-offices-2.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-section .container {
+    padding: 4rem;
+}
+
+/* Lighting Process Section Styling */
+#lighting-process {
+    background-color: #f8f9fa;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Title and Description */
+.lighting-process-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: #0044ff;
+}
+
+.lighting-process-description {
+    font-size: 18px;
+    color: #000;
+}
+
+.lighting-process-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lighting-process-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lighting-process-card-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.lighting-process-card-text {
+    color: #000;
+    font-size: 16px;
+}
+
+.custom-img {
+    height: 250px;
+    width: 450px; /* Ensures images take up full width of their container */
+    object-fit: cover; /* Ensures images maintain aspect ratio while filling the dimensions */
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+/* Add custom padding for container to avoid side scroll */
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensuring no horizontal overflow */
+body {
+    overflow-x: hidden;
+}
+
+/* Optional: Adds more margin between rows */
+.row {
+    margin-bottom: 30px;
+}
+
+/* For responsiveness, ensure content stays within bounds */
+@media (max-width: 767px) {
+    .custom-img {
+        height: auto; /* Adjusts the height of images on small screens */
+        width: 100%; /* Makes images fully responsive */
+    }
+}
+
+/* Custom styles for client cards section */
+.client-cards-section {
+  padding: 60px 0;
+}
+
+.client-cards-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #0044ff;
+}
+
+.client-cards {
+  display: flex;
+  overflow-x: auto;  /* Enables horizontal scroll */
+  gap: 20px; /* Adds space between cards */
+}
+
+.client-card {
+  flex: 0 0 auto; /* Ensures each card remains in a single row */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.client-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.client-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-card-img-top {
+  width: 250px;
+  height: 200px;
+  object-fit: contain; /* Adjusts images while maintaining aspect ratio */
+}
+
+/* Equal height for client cards */
+.client-card-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  /* On smaller screens, still display in a row with scroll */
+  .client-cards {
+    flex-direction: row;
+    align-items: center;
   }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Home | Electreus{% endblock %}</title>
+    <title>{% block title %} Home | Electreus {% endblock %}</title>
 
     <!-- Favicon link -->
     <link rel="icon" href="static/images/logo.png" type="image/png" />
@@ -39,13 +39,13 @@
                         <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">OUR PROJECTS</a>
+                        <a class="nav-link" href="{% url 'projects' %}">OUR PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
+                        <a class="nav-link" href="{% url 'services' %}">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT US</a>
+                        <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
                     </li>
                 </ul>
             </div>
@@ -115,7 +115,7 @@
     <script src="static/js/script.js"></script>
     <script src="static/js/count.js"></script>
     <script src="static/js/brands.js"></script>
-
+    <script src="static/js/clients.js"></script>
 
 </body>
 </html>

@@ -17,9 +17,9 @@ document.querySelectorAll('.process-card').forEach(card => {
     ];
   
     const texts = [
-      'PLANNING AND STRATEGY : Since there is a lot of machinery that operates on electricity and there is no electricity connection at site, a temporary electric pole is installed with the approval of KSEB/Electrical Inspectorate of Kerala. Before the slab is finalized with concrete, electrical conduits are laid over the bottom steel rods of roof slab, mainly ceiling fan points and electrical circuits.',
-      'DESIGN AND DEVELOP : Calculating the total connected load of a building is crucial to ensure the electrical system is properly designed. This includes sizing transformers, generators, panel boards, and switchgear to handle peak loads safely. A client-based site meeting will help determine the optimal placement of power outlets and ensure correct wiring for circuits.',
-      'TEST AND DELIVER : At the final stage of the project, all electrical connections are checked including testing and commissioning of transformer / generator / panel board / VDB / DB, termination of switchboards, installation of fans, light fixtures, and getting energization sanction & approval from Electrical Inspectorate / KSEB.'
+      'Since there is a lot of machinery that operates on electricity and there is no electricity connection at site, a temporary electric pole is installed with the approval of KSEB/Electrical Inspectorate of Kerala. Before the slab is finalized with concrete, electrical conduits are laid over the bottom steel rods of roof slab, mainly ceiling fan points and electrical circuits.',
+      'Calculating the total connected load of a building is crucial to ensure the electrical system is properly designed. This includes sizing transformers, generators, panel boards, and switchgear to handle peak loads safely. A client-based site meeting will help determine the optimal placement of power outlets and ensure correct wiring for circuits.',
+      'At the final stage of the project, all electrical connections are checked including testing and commissioning of transformer / generator / panel board / VDB / DB, termination of switchboards, installation of fans, light fixtures, and getting energization sanction & approval from Electrical Inspectorate / KSEB.'
     ];
   
     // Adjust for zero-indexed array in JavaScript
