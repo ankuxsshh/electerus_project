@@ -35,19 +35,19 @@ body {
 
 /* Navbar links hover effect */
 .navbar .nav-link:hover {
-    color: black !important;
+    color: #3268ff !important;
 }
 
 /* Navbar change when scrolled */
 .navbar.scrolled {
-    background-color: rgb(152, 145, 248) !important;
+    background-color: rgb(241, 240, 255) !important;
     /* Blue background when scrolled */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     /* Add shadow to the navbar */
 }
 
 .navbar.scrolled .nav-link {
-    color: white !important;
+    color: #0034c4 !important;
     /* Change nav items to white when scrolled */
 }
 
@@ -172,6 +172,14 @@ body {
 .experience-section {
     background-color: #ffffff;
     padding: 80px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-section.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container {
@@ -190,8 +198,8 @@ body {
 
 .experience-description {
     font-size: 18px;
-    color: #000000;
-    line-height: 0.8;
+    color: #262626;
+    line-height: 1.8;
     margin-top: 0;
 }
 
@@ -207,8 +215,15 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     color: white;
     border-radius: 0 !important;
-    /* No border radius */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.custom-card.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .custom-card:hover {
@@ -229,6 +244,7 @@ body {
 .card-number {
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: 45px;
 }
 
 /* Card title styling */
@@ -242,22 +258,23 @@ body {
     cursor: pointer;
 }
 
-/* Add this for the background image effect */
-.custom-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.144);
-    border-radius: 0 !important;
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Optional: Add padding to the container to make it look more balanced */
 .exclusive_deal.container {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 /* Make sure cards have equal heights for alignment */
@@ -265,6 +282,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Custom Styles for About Us Section */
@@ -320,7 +349,7 @@ body {
 
 /* FOOTER */
 footer h5 {
-    color: rgb(255, 255, 255);
+    color: #0034c4 !important;
 }
 
 footer h5:hover {
@@ -328,7 +357,7 @@ footer h5:hover {
 }
 
 footer p {
-    color: rgb(255, 255, 255);
+    color: #0034c4 !important;
 }
 
 footer p:hover {
@@ -338,16 +367,16 @@ footer p:hover {
 footer .fab {
     font-size: 1.8rem;
     transition: color 0.3s;
-    color: rgb(255, 255, 255);
+    color: #0034c4 !important;
 }
 
 footer .fab:hover {
-    color: rgb(39, 31, 156);
+    color: rgb(75, 67, 194);
 }
 
 footer {
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgb(152, 145, 248) !important;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(241, 240, 255) !important;
 }
 
 /* Centering footer columns in a row */
@@ -599,29 +628,39 @@ footer .row {
 }
 
 .utube-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 20px;
 }
 
 .left-container {
-    flex: 1;
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.right-container iframe {
-    width: 100%;
-    height: 100%;
+  flex: 1;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.6;
 }
 
 .right-container {
-    flex: 1;
-    aspect-ratio: 16/9;
-    /* Maintain video aspect ratio */
+  flex: 1;
+  aspect-ratio: 16 / 9; /* Maintain video aspect ratio */
+  position: relative; /* Ensure iframe fits within container */
+  overflow: hidden;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Process card styling */
@@ -735,7 +774,7 @@ footer .row {
 }
 
 .about-section {
-    background: url('https://images.unsplash.com/photo-1581090581500-58b180d1f0fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background: url('https://liveyourhome.at/wp-content/uploads/2023/02/Interior-Design-Blog-2023-1024x576.png') no-repeat center center fixed;
     background-size: cover;
     height: 50vh;
     display: flex;
@@ -946,7 +985,7 @@ footer .row {
 }
 
 .project-section {
-    background: url('https://wallpapercrafter.com/th8001/596265-the-city-table-room-sofa-books-Windows-chairs.jpg') no-repeat center center fixed;
+    background: url('https://kaizenaire.com/wp-content/uploads/2023/12/image-4266.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: 50vh;
     display: flex;
@@ -958,7 +997,8 @@ footer .row {
     padding: 4rem;
 }
 
-.project-card {
+/* Section-specific styles for the Projects section */
+.section-projects-card {
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -971,41 +1011,94 @@ footer .row {
     height: 220px;
 }
 
-.project-image {
+.section-projects-image {
     position: relative;
     width: 260px;
     height: 250px;
     overflow: hidden;
 }
 
-.project-card img {
+.section-projects-card img {
     object-fit: cover;
-    /* Ensures the image covers the container without distortion */
     width: 260px;
     height: 250px;
     transition: transform 0.3s ease;
 }
 
-.project-card:hover img {
+.section-projects-card:hover img {
     transform: scale(1.1);
 }
 
-.project-title {
+.section-projects-title {
     background-color: white;
     text-align: center;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     color: black;
     font-weight: bold;
+    font-size: 16px;
     background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(202, 205, 244, 0.68));
 }
 
-.project-container {
+.section-projects-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
+.section-projects-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section-projects-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.section-projects-overlay-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.789);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.section-projects-close-overlay {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.section-projects-image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+    height: 400px;
+}
+
+.section-projects-image-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .service-section {
     background: url('https://www.modern.place/wp-content/uploads/2023/05/lighting-standards-for-offices-2.png') no-repeat center center fixed;
@@ -1060,9 +1153,12 @@ footer .row {
 
 .custom-img {
     height: 250px;
-    width: 450px; /* Ensures images take up full width of their container */
-    object-fit: cover; /* Ensures images maintain aspect ratio while filling the dimensions */
-    border-radius: 8px; /* Optional for rounded corners */
+    width: 450px;
+    /* Ensures images take up full width of their container */
+    object-fit: cover;
+    /* Ensures images maintain aspect ratio while filling the dimensions */
+    border-radius: 8px;
+    /* Optional for rounded corners */
 }
 
 /* Add custom padding for container to avoid side scroll */
@@ -1084,63 +1180,110 @@ body {
 /* For responsiveness, ensure content stays within bounds */
 @media (max-width: 767px) {
     .custom-img {
-        height: auto; /* Adjusts the height of images on small screens */
-        width: 100%; /* Makes images fully responsive */
+        height: auto;
+        /* Adjusts the height of images on small screens */
+        width: 100%;
+        /* Makes images fully responsive */
     }
 }
 
 /* Custom styles for client cards section */
 .client-cards-section {
-  padding: 60px 0;
+    padding: 60px 0;
 }
 
 .client-cards-title {
-  font-size: 36px;
-  font-weight: 600;
-  color: #0044ff;
+    font-size: 36px;
+    font-weight: 600;
+    color: #0044ff;
 }
 
 .client-cards {
-  display: flex;
-  overflow-x: auto;  /* Enables horizontal scroll */
-  gap: 20px; /* Adds space between cards */
+    display: flex;
+    overflow-x: auto;
+    /* Enables horizontal scroll */
+    gap: 20px;
+    /* Adds space between cards */
 }
 
 .client-card {
-  flex: 0 0 auto; /* Ensures each card remains in a single row */
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    flex: 0 0 auto;
+    /* Ensures each card remains in a single row */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .client-card.visible {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .client-card-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .client-card-img-top {
-  width: 250px;
-  height: 200px;
-  object-fit: contain; /* Adjusts images while maintaining aspect ratio */
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    /* Adjusts images while maintaining aspect ratio */
 }
 
 /* Equal height for client cards */
 .client-card-item {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 @media (max-width: 767px) {
-  /* On smaller screens, still display in a row with scroll */
-  .client-cards {
-    flex-direction: row;
-    align-items: center;
-  }
+
+    /* On smaller screens, still display in a row with scroll */
+    .client-cards {
+        flex-direction: row;
+        align-items: center;
+    }
 }
+
+
+.contact-section {
+    background: url('https://media.istockphoto.com/id/1134890323/photo/woman-using-smartphone-the-concept-of-using-the-phone-is-essential-in-everyday-life.jpg?b=1&s=612x612&w=0&k=20&c=hdF9-MA1VmJ1qjvr7-mobgu_9da7T6zfM1jtRflVCNw=') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-control {
+    border-radius: 10px;
+    height: 50px;
+}
+
+.map-container {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #0044ff;
+    border-color: #0044ff;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0033cc;
+    border-color: #0033cc;
+}
+
+
