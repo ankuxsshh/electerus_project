@@ -51,7 +51,7 @@ html {
 }
 
 .navbar-logo {
-    height: 110px;
+    height: 120px;
     /* Adjust logo height */
     width: auto;
 }
@@ -63,6 +63,7 @@ html {
     margin: 0 35px;
     font-weight: 400;
     text-align: center;
+    font-weight: 600;
 }
 
 /* Navbar links hover effect */
@@ -78,6 +79,7 @@ html {
 
 .navbar.scrolled .nav-link {
     color: #0034c4 !important;
+    font-weight: 600;
 }
 
 .navbar.scrolled .nav-link:hover {
@@ -103,6 +105,7 @@ html {
 
     .navbar .nav-link {
         margin: 5px 0;
+        font-weight: 500;
     }
 
     .navbar-toggler {
@@ -742,9 +745,7 @@ footer .social-icon:hover {
 .right-container {
     flex: 1;
     aspect-ratio: 16 / 9;
-    /* Maintain video aspect ratio */
     position: relative;
-    /* Ensure iframe fits within container */
     overflow: hidden;
 }
 
@@ -761,6 +762,31 @@ footer .social-icon:hover {
     width: 100%;
     height: 100%;
 }
+
+/* Mobile responsiveness using Bootstrap's grid system */
+@media (max-width: 767px) {
+    .utube-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+        height: 200px;
+        /* Adjust the video height on smaller screens */
+    }
+
+    h6 {
+        font-size: 24px;
+        /* Adjust heading size for mobile */
+    }
+}
+
 
 /* Process card styling */
 .process-card {
@@ -808,17 +834,66 @@ footer .social-icon:hover {
     z-index: 1050;
 }
 
+/* Default Overlay Content Styling */
 .overlay-content {
     position: relative;
     width: 90%;
     max-width: 600px;
     height: 400px;
+    /* Set a fixed height initially */
     background: #000;
     border-radius: 8px;
     text-align: center;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 767px) {
+    .overlay-content {
+        width: 95%;
+        /* Increase width to 95% for smaller screens */
+        height: 70vh;
+        /* Adjust height to take up 70% of viewport height */
+        padding: 15px;
+        /* Reduce padding for better use of space */
+    }
+
+    .overlay-text {
+        font-size: 16px;
+        /* Slightly smaller font size for mobile */
+        bottom: 40px;
+        /* Adjust position to prevent text from overlapping */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 10px;
+        /* Add padding to ensure text doesn't touch edges */
+    }
+
+    .overlay-image {
+        filter: brightness(0.3);
+        /* Make image darker for better readability */
+    }
+}
+
+/* Further adjustments for very small screens (like phones in portrait mode) */
+@media (max-width: 576px) {
+    .overlay-content {
+        width: 90%;
+        /* Ensure it fits within the small screen */
+        height: 60vh;
+        /* Make height responsive to viewport height */
+    }
+
+    .overlay-text {
+        font-size: 14px;
+        /* Further reduce font size */
+        bottom: 30px;
+        /* Adjust bottom position for even smaller screens */
+    }
+}
+
 
 .overlay-content .overlay-image {
     position: absolute;
@@ -980,6 +1055,7 @@ footer .social-icon:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 100%;
+    max-height: 100%;
     filter: brightness(0.9);
 }
 
@@ -1024,6 +1100,18 @@ footer .social-icon:hover {
     margin: 0;
     font-size: 17px;
     line-height: 2.2;
+}
+
+@media (max-width: 768px) {
+    .point-slider-container .carousel-item img {
+        height: auto;
+    }
+
+    .point-slider-container .d-md-none ul {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #000;
+    }
 }
 
 /* Styling for the brand-cards container */
@@ -1095,10 +1183,6 @@ footer .social-icon:hover {
     align-items: center;
 }
 
-.project-section .container {
-    padding: 4rem;
-}
-
 /* Section-specific styles for the Projects section */
 .section-projects-card {
     overflow: hidden;
@@ -1108,7 +1192,7 @@ footer .social-icon:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px;
+    margin: 10px;
     width: 260px;
     height: 220px;
 }
@@ -1134,7 +1218,7 @@ footer .social-icon:hover {
 .section-projects-title {
     background-color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 0 0 5px 5px;
     color: black;
     font-weight: bold;
@@ -1200,6 +1284,129 @@ footer .social-icon:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* Responsive overrides */
+@media (max-width: 767.98px) {
+    .section-projects-card {
+        width: 90%;
+        height: 150px;
+    }
+
+    .section-projects-image {
+        width: 100%;
+        height: 140px;
+    }
+
+    .section-projects-card img {
+        width: 100%;
+        height: 140px;
+    }
+
+    .section-projects-title {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .section-projects-container {
+        gap: 0.5rem;
+    }
+
+    .section-projects-image-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-projects-image-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Responsive Adjustments for Overlay in style.css */
+@media (max-width: 768px) {
+    .section-projects-overlay {
+        display: none;
+        /* Ensure it remains hidden unless activated */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        /* Darker overlay for better focus */
+        z-index: 1000;
+        justify-content: center;
+        align-items: flex-start;
+        /* Align content to the top for better scrolling experience */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .section-projects-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .section-projects-overlay-content {
+        position: relative;
+        top: 150px;
+        width: 100%;
+        max-height: 60%;
+        /* Adjust container to avoid cutting off images */
+        overflow-y: auto;
+        /* Scroll for images inside */
+        background: rgba(255, 255, 255, 0.95);
+        /* Slightly opaque background for contrast */
+        border-radius: 10px;
+        /* Add padding for better spacing on smaller screens */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-projects-close-overlay {
+        position: fixed;
+        /* Keep close button fixed for better usability */
+        top: 150px;
+        right: 30px;
+        font-size: 28px;
+        /* Adjust size for smaller screens */
+        color: rgb(0, 0, 0);
+        /* Ensure the close icon is visible on the overlay */
+        cursor: pointer;
+        z-index: 1010;
+        /* Keep it above the overlay content */
+    }
+
+    .section-projects-image-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* Wrap images for responsiveness */
+        gap: 10px;
+        justify-content: center;
+        /* Center align images */
+        align-items: flex-start;
+        /* Align items to the top */
+        max-height: 100%;
+        /* Ensure full height of container for scrolling */
+    }
+
+    .section-projects-image-container img {
+        width: 90%;
+        /* Adjust image size for mobile screens */
+        max-width: 400px;
+        width: 300px;
+        /* Cap maximum width for better scaling */
+        height: 200px;
+        /* Maintain aspect ratio */
+        object-fit: cover;
+        /* Ensure images are cropped properly */
+        border-radius: 8px;
+        margin: 0 auto;
+        /* Center images */
+    }
 }
 
 .service-section {
@@ -1289,10 +1496,6 @@ body {
     }
 }
 
-/* Custom styles for client cards section */
-.client-cards-section {
-    padding: 60px 0;
-}
 
 .client-cards-title {
     font-size: 36px;
@@ -1304,7 +1507,7 @@ body {
     display: flex;
     overflow-x: auto;
     /* Enables horizontal scroll */
-    gap: 20px;
+    gap: 30px;
     /* Adds space between cards */
 }
 
@@ -1347,6 +1550,7 @@ body {
     .client-cards {
         flex-direction: row;
         align-items: center;
+        margin: 40px;
     }
 }
 
@@ -1388,40 +1592,40 @@ body {
     border-color: #0033cc;
 }
 
-
-.team-heading {
-    text-align: center;
-    margin-bottom: 4rem;
-    font-size: 36px;
-    font-weight: 600;
-    color: #0044ff !important;
-}
-
-.team-paragraph {
-    font-size: 16px;
-    margin: 60px;
-    font-weight: 400;
-    color: #262626;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.team-image {
+/* Custom styles for responsiveness */
+.banner-container {
     max-width: 100%;
-    width: 80%;
-    height: 70vh;
-    border-radius: 4px;
-    /* You can add any specific image styling or responsiveness here */
 }
 
-.text-center {
-    text-align: center;
+.banner-heading {
+    font-size: 40px;
 }
 
-.mb-4 {
-    margin-bottom: 4rem;
+.banner-subheading {
+    font-size: 20px;
 }
 
-.mb-2 {
-    margin-bottom: 2rem;
+/* Ensure text and image are responsive on smaller screens */
+@media (max-width: 767px) {
+    .banner-heading {
+        font-size: 30px;
+        /* Adjust font size for small screens */
+    }
+
+    .banner-subheading {
+        font-size: 16px;
+        /* Adjust font size for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-heading {
+        font-size: 24px;
+        /* Further adjust font size for extra small screens */
+    }
+
+    .banner-subheading {
+        font-size: 14px;
+        /* Adjust font size for very small screens */
+    }
 }
